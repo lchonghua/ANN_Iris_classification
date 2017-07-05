@@ -1,0 +1,48 @@
+1.Dataset: weka to make the plot / mean/stdev, etc../ not linear separatable
+
+2. To compare nonlinear function
+iterations = 500;
+enditeration = 0;
+errorThreshhold = 0.1;
+learningRate = 0.1;
+batch=1;
+hiddenNeurons = [2 2];
+momentum = 0.1;
+
+
+seed = 30
+ReLU: 150
+Sigmoid: 180
+tanh: 29
+
+seed = 38
+ReLU: 47
+Sigmoid: 89
+tanh: 32
+
+seed = 45
+ReLU: 60
+Sigmoid: 234
+tanh: 16
+
+QA-1: 1 layer with 3 nodes; 2 layer X 2nods
+
+for the first layer -- about the same time
+for the second layer-- not consistent results
+
+QA-2: no
+
+QA-3
+seed = 27; ReLU, hiddenNeurons = 4, at around iteration = 15, 
+overfitting correspond to weights unstabilization (some weights, not all of them);
+
+QB-1
+for the first layer, we get similar results for the nodes. but not the case for second layer
+yes for sigmoid, tanh, but not for ReLU
+foucus on sigmoid. first layer is the input --fixed for each iteration; but for other layers, the input is weight*previous output....
+
+QC-1
+sigmoid overfits later. not sure about the other two--mixed results
+
+
+
